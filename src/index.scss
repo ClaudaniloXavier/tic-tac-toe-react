@@ -1,0 +1,126 @@
+$background-color: #37474F;
+$accent-blue: #00B0FF;
+$button: #FF4081;
+$button-hover: #F06292;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px "Roboto", Futura, sans-serif;
+    background-color: $background-color;
+}
+
+#root {
+    height: 938px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.square {
+    background-color: transparent;
+    border: 2px solid $accent-blue;
+    float: left;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 34px;
+    height: 100px;
+    width: 100px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    color: $accent-blue;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.game {
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info {
+    width: 350px;;
+    left: 0;
+    margin-top: 50px;
+    position: absolute;
+    top: -40px;
+
+    .game-status {
+        font-size: 22px;
+        color: #FFF;
+        text-align: center;
+        background-color: $accent-blue;
+        padding: 16px;
+        margin-bottom: 16px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        color: #FFF;
+    }
+
+    ol {
+        text-align: center;
+        justify-content: center;
+        list-style: none;
+        margin: 16px 0;
+        padding: 0;
+    }
+
+}
+
+.history-button {
+    background-color: $button;
+    border: 0;
+    outline: none;
+    padding: 12px;
+    border-radius: 0 2px 2px 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    transition: background-color 300ms;
+    cursor: pointer;
+    margin: 3px 0;
+    width: 60%;
+    float: left;
+
+    &:hover {
+        background-color: $button-hover;
+    }
+}
+
+.no-border-top {
+    border-top: none;
+}
+
+.no-border-bottom {
+    border-bottom: none;
+}
+
+.no-border-left {
+    border-left: none;
+}
+
+.no-border-right {
+    border-right: none;
+}
